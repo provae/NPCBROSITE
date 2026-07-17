@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NPCBRO - Contact</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="loading-screen">
+        <div class="loading-content">
+            <div class="loading-logo glitch-text">NPCBRO</div>
+            <div class="loading-bar">
+                <div class="loading-progress"></div>
+            </div>
+            <div class="loading-text">SYSTEM INITIALIZING...</div>
+        </div>
+    </div>
+
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop">↑</button>
+    
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="download.jpg" alt="NPCBRO" class="logo-mascot">
+                <span>NPCBRO</span>
+            </a>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="games.html">Games</a>
+                <a href="community.html">Community</a>
+                <a href="about.html">About</a>
+                <a href="team.html">Team</a>
+                <a href="contact.html" class="active">Contact</a>
+                <a href="news.html">News</a>
+            </div>
+            <button class="enter-btn">ENTER SYSTEM</button>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="index.html">Home</a>
+        <a href="games.html">Games</a>
+        <a href="community.html">Community</a>
+        <a href="about.html">About</a>
+        <a href="team.html">Team</a>
+        <a href="contact.html">Contact</a>
+        <a href="news.html">News</a>
+        <div class="mobile-menu-buttons">
+            <button class="enter-btn">ENTER SYSTEM</button>
+        </div>
+    </div>
+
+    <div class="background-effects">
+        <div class="gradient-orb orb-1"></div>
+        <div class="gradient-orb orb-2"></div>
+        <div class="grid-pattern"></div>
+        <div class="particles">
+            <div class="particle" style="left: 10%; animation-delay: 0s;"></div>
+            <div class="particle" style="left: 20%; animation-delay: 2s;"></div>
+            <div class="particle" style="left: 30%; animation-delay: 4s;"></div>
+            <div class="particle" style="left: 40%; animation-delay: 6s;"></div>
+            <div class="particle" style="left: 50%; animation-delay: 8s;"></div>
+            <div class="particle" style="left: 60%; animation-delay: 10s;"></div>
+            <div class="particle" style="left: 70%; animation-delay: 12s;"></div>
+            <div class="particle" style="left: 80%; animation-delay: 14s;"></div>
+            <div class="particle" style="left: 90%; animation-delay: 1s;"></div>
+            <div class="particle" style="left: 15%; animation-delay: 3s;"></div>
+            <div class="particle" style="left: 25%; animation-delay: 5s;"></div>
+            <div class="particle" style="left: 35%; animation-delay: 7s;"></div>
+            <div class="particle" style="left: 45%; animation-delay: 9s;"></div>
+            <div class="particle" style="left: 55%; animation-delay: 11s;"></div>
+            <div class="particle" style="left: 65%; animation-delay: 13s;"></div>
+            <div class="particle" style="left: 75%; animation-delay: 15s;"></div>
+            <div class="particle" style="left: 85%; animation-delay: 17s;"></div>
+            <div class="particle" style="left: 95%; animation-delay: 19s;"></div>
+        </div>
+        <div class="fog-layer"></div>
+        <div class="glitch-overlay"></div>
+    </div>
+
+    <section class="hero">
+        <div class="hero-content">
+            <div class="system-status">SYSTEM CONNECTING...</div>
+            <h1 class="hero-title">
+                <span class="title-main">GET IN</span>
+                <span class="title-accent glitch-text">TOUCH</span>
+            </h1>
+            <p class="hero-subtitle">"Questions? We're here to help."</p>
+        </div>
+    </section>
+
+    <section class="contact-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>CONTACT US</h2>
+                <p>Have questions or need support? Reach out to the team.</p>
+            </div>
+
+            <div class="contact-grid">
+                <div class="contact-form-card">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required placeholder="Your name">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required placeholder="your@email.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <select id="subject" name="subject" required>
+                                <option value="">Select a topic</option>
+                                <option value="general">General Inquiry</option>
+                                <option value="support">Technical Support</option>
+                                <option value="partnership">Partnership</option>
+                                <option value="media">Media/Press</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" required placeholder="Your message..."></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary">SEND MESSAGE</button>
+                    </form>
+                </div>
+
+                <div class="contact-info-card">
+                    <div class="contact-info-item">
+                        <div class="contact-icon">📧</div>
+                        <h3>Email</h3>
+                        <p>contact@npcbro.io</p>
+                    </div>
+                    <div class="contact-info-item">
+                        <div class="contact-icon">𝕏</div>
+                        <h3>Twitter</h3>
+                        <p>@NPCBRO</p>
+                    </div>
+                    <div class="contact-info-item">
+                        <div class="contact-icon">💬</div>
+                        <h3>Discord</h3>
+                        <p>Join our community</p>
+                    </div>
+                    <div class="contact-info-item">
+                        <div class="contact-icon">⏰</div>
+                        <h3>Response Time</h3>
+                        <p>Usually within 24-48 hours</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-header" style="margin-top: 6rem;">
+                <h2>FAQ</h2>
+                <p>Quick answers to common questions.</p>
+            </div>
+
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h3 class="faq-question">How do I buy NPCBRO?</h3>
+                    <p class="faq-answer">After launch, you can buy NPCBRO on decentralized exchanges like Jupiter or Raydium using your Solana wallet.</p>
+                </div>
+                <div class="faq-item">
+                    <h3 class="faq-question">Is NPCBRO a good investment?</h3>
+                    <p class="faq-answer">NPCBRO is a memecoin and should be treated as such. Always do your own research and never invest more than you can afford to lose.</p>
+                </div>
+                <div class="faq-item">
+                    <h3 class="faq-question">How can I join the team?</h3>
+                    <p class="faq-answer">We're always looking for talented individuals. Reach out via the contact form with your portfolio and experience.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-logo glitch-text">NPCBRO</div>
+            <p>Escaped the script.</p>
+            <div class="copyright">© 2024 NPCBRO. All rights reserved.</div>
+        </div>
+    </footer>
+
+    <script>
+        // Loading Screen
+        window.addEventListener('load', function() {
+            const loadingScreen = document.getElementById('loading-screen');
+            setTimeout(() => {
+                loadingScreen.classList.add('hidden');
+                setTimeout(() => {
+                    loadingScreen.style.display = 'none';
+                }, 500);
+            }, 2000);
+        });
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.pageYOffset > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Mobile menu toggle
+        const hamburger = document.getElementById('hamburger');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        hamburger.addEventListener('click', function() {
+            hamburger.classList.toggle('active');
+            mobileMenu.classList.toggle('active');
+        });
+
+        // Close mobile menu when clicking a link
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', function() {
+                hamburger.classList.remove('active');
+                mobileMenu.classList.remove('active');
+            });
+        });
+
+        // Contact form handler
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const subject = document.getElementById('subject').value;
+            const message = document.getElementById('message').value;
+
+            if (name && email && subject && message) {
+                alert('Thanks for your message, ' + name + '! We\'ll get back to you soon.');
+                this.reset();
+            } else {
+                alert('Please fill in all fields.');
+            }
+        });
+
+        // Parallax effect on scroll
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const orbs = document.querySelectorAll('.gradient-orb');
+            orbs.forEach((orb, index) => {
+                const speed = 0.1 + (index * 0.05);
+                orb.style.transform = `translateY(${scrolled * speed}px)`;
+            });
+        });
+
+        // Scroll Progress Bar
+        window.addEventListener('scroll', function() {
+            const scrollProgress = document.getElementById('scrollProgress');
+            const scrollTop = window.pageYOffset;
+            const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+            const scrollPercent = (scrollTop / docHeight) * 100;
+            scrollProgress.style.width = scrollPercent + '%';
+        });
+
+        // Back to Top Button
+        const backToTop = document.getElementById('backToTop');
+        window.addEventListener('scroll', function() {
+            if (window.pageYOffset > 500) {
+                backToTop.classList.add('visible');
+            } else {
+                backToTop.classList.remove('visible');
+            }
+        });
+
+        backToTop.addEventListener('click', function() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Intersection Observer for scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.contact-form-card, .contact-info-card, .faq-item').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'opacity 0.8s ease-out, transform 0.8s ease-out';
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>

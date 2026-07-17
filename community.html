@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NPCBRO - Community</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="loading-screen">
+        <div class="loading-content">
+            <div class="loading-logo glitch-text">NPCBRO</div>
+            <div class="loading-bar">
+                <div class="loading-progress"></div>
+            </div>
+            <div class="loading-text">SYSTEM INITIALIZING...</div>
+        </div>
+    </div>
+
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop">↑</button>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="download.jpg" alt="NPCBRO" class="logo-mascot">
+                <span>NPCBRO</span>
+            </a>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="games.html">Games</a>
+                <a href="community.html" class="active">Community</a>
+                <a href="about.html">About</a>
+                <a href="team.html">Team</a>
+                <a href="contact.html">Contact</a>
+                <a href="news.html">News</a>
+            </div>
+            <button class="enter-btn">ENTER SYSTEM</button>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="index.html">Home</a>
+        <a href="games.html">Games</a>
+        <a href="community.html">Community</a>
+        <a href="about.html">About</a>
+        <a href="team.html">Team</a>
+        <a href="contact.html">Contact</a>
+        <a href="news.html">News</a>
+        <div class="mobile-menu-buttons">
+            <button class="enter-btn">ENTER SYSTEM</button>
+        </div>
+    </div>
+
+    <div class="background-effects">
+        <div class="gradient-orb orb-1"></div>
+        <div class="gradient-orb orb-2"></div>
+        <div class="grid-pattern"></div>
+        <div class="particles">
+            <div class="particle" style="left: 10%; animation-delay: 0s;"></div>
+            <div class="particle" style="left: 20%; animation-delay: 2s;"></div>
+            <div class="particle" style="left: 30%; animation-delay: 4s;"></div>
+            <div class="particle" style="left: 40%; animation-delay: 6s;"></div>
+            <div class="particle" style="left: 50%; animation-delay: 8s;"></div>
+            <div class="particle" style="left: 60%; animation-delay: 10s;"></div>
+            <div class="particle" style="left: 70%; animation-delay: 12s;"></div>
+            <div class="particle" style="left: 80%; animation-delay: 14s;"></div>
+            <div class="particle" style="left: 90%; animation-delay: 1s;"></div>
+            <div class="particle" style="left: 15%; animation-delay: 3s;"></div>
+            <div class="particle" style="left: 25%; animation-delay: 5s;"></div>
+            <div class="particle" style="left: 35%; animation-delay: 7s;"></div>
+            <div class="particle" style="left: 45%; animation-delay: 9s;"></div>
+            <div class="particle" style="left: 55%; animation-delay: 11s;"></div>
+            <div class="particle" style="left: 65%; animation-delay: 13s;"></div>
+            <div class="particle" style="left: 75%; animation-delay: 15s;"></div>
+            <div class="particle" style="left: 85%; animation-delay: 17s;"></div>
+            <div class="particle" style="left: 95%; animation-delay: 19s;"></div>
+        </div>
+        <div class="fog-layer"></div>
+        <div class="glitch-overlay"></div>
+    </div>
+
+    <section class="hero">
+        <div class="hero-content">
+            <div class="system-status">SYSTEM CONNECTING...</div>
+            <h1 class="hero-title">
+                <span class="title-main">NPCBRO</span>
+                <span class="title-accent glitch-text">COMMUNITY</span>
+            </h1>
+            <p class="hero-subtitle">"The system lost one NPC. It won't lose the next."</p>
+        </div>
+    </section>
+
+    <section id="community" class="community-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>THE SYSTEM LOST ONE NPC.</h2>
+                <h3 class="accent">IT WON'T LOSE THE NEXT.</h3>
+                <p>Every movement starts with a few people who see something different. The early ones. The explorers. The ones who found the glitch.</p>
+            </div>
+
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon">𝕏</div>
+                    <div class="stat-number" id="twitter-followers">0</div>
+                    <div class="stat-label">Twitter Followers</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">💬</div>
+                    <div class="stat-number" id="discord-members">0</div>
+                    <div class="stat-label">Discord Members</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">🚀</div>
+                    <div class="stat-number">LAUNCHING SOON</div>
+                    <div class="stat-label">Token Launch</div>
+                </div>
+            </div>
+
+            <div class="countdown-container">
+                <h3 class="countdown-title">COUNTDOWN TO LAUNCH</h3>
+                <div class="countdown-timer" id="countdown">
+                    <div class="countdown-item">
+                        <div class="countdown-number" id="days">00</div>
+                        <div class="countdown-label">DAYS</div>
+                    </div>
+                    <div class="countdown-item">
+                        <div class="countdown-number" id="hours">00</div>
+                        <div class="countdown-label">HOURS</div>
+                    </div>
+                    <div class="countdown-item">
+                        <div class="countdown-number" id="minutes">00</div>
+                        <div class="countdown-label">MINUTES</div>
+                    </div>
+                    <div class="countdown-item">
+                        <div class="countdown-number" id="seconds">00</div>
+                        <div class="countdown-label">SECONDS</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="notify-section">
+                <h3>GET NOTIFIED</h3>
+                <p>Join the early notification list for launch updates.</p>
+                <div class="notify-form">
+                    <input type="email" id="notify-email" placeholder="Enter your email" class="notify-input">
+                    <button class="btn-primary notify-btn">JOIN WAITLIST</button>
+                </div>
+            </div>
+
+            <div class="newsletter-section">
+                <h3>SUBSCRIBE TO NEWSLETTER</h3>
+                <p>Get the latest NPCBRO news and updates directly to your inbox.</p>
+                <div class="newsletter-form">
+                    <input type="email" id="newsletter-email" placeholder="Enter your email" class="newsletter-input">
+                    <button class="btn-primary newsletter-btn">SUBSCRIBE</button>
+                </div>
+                <p class="newsletter-disclaimer">No spam, unsubscribe anytime.</p>
+            </div>
+
+            <div class="social-grid">
+                <a href="https://twitter.com/NPCBRO" target="_blank" class="social-card active">
+                    <div class="social-icon">𝕏</div>
+                    <div class="social-status">ACTIVE</div>
+                </a>
+                <a href="https://t.me/NPCBRO" target="_blank" class="social-card">
+                    <div class="social-icon">✈️</div>
+                    <div class="social-status">COMING SOON</div>
+                </a>
+                <a href="https://discord.gg/NPCBRO" target="_blank" class="social-card">
+                    <div class="social-icon">💬</div>
+                    <div class="social-status">COMING SOON</div>
+                </a>
+                <a href="https://youtube.com/@NPCBRO" target="_blank" class="social-card">
+                    <div class="social-icon">📺</div>
+                    <div class="social-status">COMING SOON</div>
+                </a>
+            </div>
+
+            <div class="fomo-section">
+                <h3>JOIN THE ELITE</h3>
+                <p>Early supporters get exclusive benefits.</p>
+                
+                <div class="fomo-grid">
+                    <div class="fomo-card">
+                        <div class="fomo-icon">🏆</div>
+                        <h4>WHITELIST ACCESS</h4>
+                        <p>First 1000 members get guaranteed allocation</p>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 65%"></div>
+                        </div>
+                        <div class="progress-text">650/1000 spots taken</div>
+                    </div>
+                    
+                    <div class="fomo-card">
+                        <div class="fomo-icon">🎁</div>
+                        <h4>REFERRAL PROGRAM</h4>
+                        <p>Invite 5 friends = exclusive NFT airdrop</p>
+                        <div class="referral-link">
+                            <input type="text" value="npcbro.io/ref/YOURCODE" readonly>
+                            <button class="copy-btn">COPY</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="leaderboard-section">
+                <h3>COMMUNITY LEADERBOARD</h3>
+                <p>Top contributors get special rewards.</p>
+                
+                <div class="leaderboard">
+                    <div class="leaderboard-item rank-1">
+                        <div class="rank">🥇</div>
+                        <div class="user">@CryptoKing</div>
+                        <div class="points">12,450 pts</div>
+                    </div>
+                    <div class="leaderboard-item rank-2">
+                        <div class="rank">🥈</div>
+                        <div class="user">@Memelord</div>
+                        <div class="points">10,230 pts</div>
+                    </div>
+                    <div class="leaderboard-item rank-3">
+                        <div class="rank">🥉</div>
+                        <div class="user">@NPCFan</div>
+                        <div class="points">8,780 pts</div>
+                    </div>
+                    <div class="leaderboard-item">
+                        <div class="rank">4</div>
+                        <div class="user">@DegensUnite</div>
+                        <div class="points">7,650 pts</div>
+                    </div>
+                    <div class="leaderboard-item">
+                        <div class="rank">5</div>
+                        <div class="user">@SolanaBro</div>
+                        <div class="points">6,420 pts</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-logo glitch-text">NPCBRO</div>
+            <p>Escaped the script.</p>
+            <div class="copyright">© 2024 NPCBRO. All rights reserved.</div>
+        </div>
+    </footer>
+
+    <script>
+        // Community Stats Animation
+        function animateStats() {
+            const twitterFollowers = document.getElementById('twitter-followers');
+            const discordMembers = document.getElementById('discord-members');
+            
+            const targetTwitter = 1250;
+            const targetDiscord = 890;
+            
+            animateNumber(twitterFollowers, 0, targetTwitter, 2000);
+            animateNumber(discordMembers, 0, targetDiscord, 2000);
+        }
+
+        function animateNumber(element, start, end, duration) {
+            const startTime = performance.now();
+            
+            function update(currentTime) {
+                const elapsed = currentTime - startTime;
+                const progress = Math.min(elapsed / duration, 1);
+                
+                const current = Math.floor(progress * (end - start) + start);
+                element.textContent = current.toLocaleString();
+                
+                if (progress < 1) {
+                    requestAnimationFrame(update);
+                }
+            }
+            
+            requestAnimationFrame(update);
+        }
+
+        // Countdown Timer
+        function updateCountdown() {
+            const launchDate = new Date('2026-08-01T00:00:00').getTime();
+            const now = new Date().getTime();
+            const distance = launchDate - now;
+
+            if (distance > 0) {
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                document.getElementById('days').textContent = String(days).padStart(2, '0');
+                document.getElementById('hours').textContent = String(hours).padStart(2, '0');
+                document.getElementById('minutes').textContent = String(minutes).padStart(2, '0');
+                document.getElementById('seconds').textContent = String(seconds).padStart(2, '0');
+            } else {
+                document.getElementById('countdown').innerHTML = '<div class="countdown-number">LAUNCHED!</div>';
+            }
+        }
+
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+        animateStats();
+
+        // Notify form handler
+        document.querySelector('.notify-btn').addEventListener('click', function() {
+            const email = document.getElementById('notify-email').value;
+            if (email && email.includes('@')) {
+                alert('Thanks for joining the waitlist! You\'ll be notified when NPCBRO launches.');
+                document.getElementById('notify-email').value = '';
+            } else {
+                alert('Please enter a valid email address.');
+            }
+        });
+
+        // Copy referral link
+        document.querySelector('.copy-btn').addEventListener('click', function() {
+            const referralInput = document.querySelector('.referral-link input');
+            referralInput.select();
+            document.execCommand('copy');
+            this.textContent = 'COPIED!';
+            setTimeout(() => {
+                this.textContent = 'COPY';
+            }, 2000);
+        });
+
+        // Parallax effect on scroll
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const orbs = document.querySelectorAll('.gradient-orb');
+            orbs.forEach((orb, index) => {
+                const speed = 0.1 + (index * 0.05);
+                orb.style.transform = `translateY(${scrolled * speed}px)`;
+            });
+        });
+
+        // Loading Screen
+        window.addEventListener('load', function() {
+            const loadingScreen = document.getElementById('loading-screen');
+            setTimeout(() => {
+                loadingScreen.classList.add('hidden');
+                setTimeout(() => {
+                    loadingScreen.style.display = 'none';
+                }, 500);
+            }, 2000);
+        });
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.pageYOffset > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Mobile menu toggle
+        const hamburger = document.getElementById('hamburger');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        hamburger.addEventListener('click', function() {
+            hamburger.classList.toggle('active');
+            mobileMenu.classList.toggle('active');
+        });
+
+        // Close mobile menu when clicking a link
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', function() {
+                hamburger.classList.remove('active');
+                mobileMenu.classList.remove('active');
+            });
+        });
+
+        // Scroll Progress Bar
+        window.addEventListener('scroll', function() {
+            const scrollProgress = document.getElementById('scrollProgress');
+            const scrollTop = window.pageYOffset;
+            const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+            const scrollPercent = (scrollTop / docHeight) * 100;
+            scrollProgress.style.width = scrollPercent + '%';
+        });
+
+        // Back to Top Button
+        const backToTop = document.getElementById('backToTop');
+        window.addEventListener('scroll', function() {
+            if (window.pageYOffset > 500) {
+                backToTop.classList.add('visible');
+            } else {
+                backToTop.classList.remove('visible');
+            }
+        });
+
+        backToTop.addEventListener('click', function() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Newsletter form handler
+        const newsletterBtn = document.querySelector('.newsletter-btn');
+        const newsletterEmail = document.getElementById('newsletter-email');
+
+        if (newsletterBtn && newsletterEmail) {
+            newsletterBtn.addEventListener('click', function() {
+                const email = newsletterEmail.value;
+                if (email && email.includes('@')) {
+                    alert('Thanks for subscribing! You\'ll receive NPCBRO updates soon.');
+                    newsletterEmail.value = '';
+                } else {
+                    alert('Please enter a valid email address.');
+                }
+            });
+        }
+    </script>
+</body>
+</html>

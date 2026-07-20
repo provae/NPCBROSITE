@@ -276,12 +276,20 @@
         async function fetchTwitterFollowers() {
             const twitterFollowers = document.getElementById('twitter-followers');
             
+            if (!twitterFollowers) {
+                console.error('Twitter followers element not found');
+                return;
+            }
+            
             // Show fallback immediately
             twitterFollowers.textContent = '147';
             
             // Try to fetch from JSON file (updated by GitHub Actions every 24h)
             try {
                 const response = await fetch('twitter-followers.json');
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
                 const data = await response.json();
                 
                 if (data.followers) {
@@ -289,7 +297,7 @@
                     console.log(`Auto-updated: ${data.followers} followers at ${data.timestamp}`);
                 }
             } catch (error) {
-                console.log('JSON file not available yet, showing fallback');
+                console.log('JSON file not available yet, showing fallback:', error);
             }
         }
 

@@ -117,9 +117,9 @@
                     </a>
                 </div>
                 <div class="stat-card">
-                    <div class="stat-icon">💬</div>
-                    <div class="stat-number" id="discord-members">0</div>
-                    <div class="stat-label">Discord Members</div>
+                    <div class="stat-icon">✈️</div>
+                    <div class="stat-number" id="telegram-members">0</div>
+                    <div class="stat-label">Telegram Members</div>
                 </div>
                 <div class="stat-card">
                     <div class="stat-icon">🚀</div>
@@ -262,13 +262,13 @@
         // Community Stats Animation
         function animateStats() {
             const twitterFollowers = document.getElementById('twitter-followers');
-            const discordMembers = document.getElementById('discord-members');
+            const telegramMembers = document.getElementById('telegram-members');
             
             // Fetch real Twitter followers from JSON file (updated by GitHub Actions)
             fetchTwitterFollowers();
             
-            const targetDiscord = 890;
-            animateNumber(discordMembers, 0, targetDiscord, 2000);
+            const targetTelegram = 890;
+            animateNumber(telegramMembers, 0, targetTelegram, 2000);
         }
 
         async function fetchTwitterFollowers() {

@@ -2962,6 +2962,43 @@ footer p {
     transform: translateY(-2px);
 }
 
+/* Twitter Button */
+.twitter-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 0.75rem;
+    background: rgba(5, 5, 5, 0.8);
+    border: 1px solid rgba(0, 255, 102, 0.3);
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.twitter-button:hover {
+    background: rgba(0, 255, 102, 0.2);
+    border-color: var(--accent);
+    transform: translateY(-2px);
+    box-shadow: 0 0 15px rgba(0, 255, 102, 0.3);
+}
+
+.twitter-button-icon {
+    font-size: 1rem;
+}
+
+.twitter-button-text {
+    color: var(--foreground);
+    font-size: 0.875rem;
+    font-weight: bold;
+    font-family: 'Courier New', monospace;
+}
+
+.twitter-button:hover .twitter-button-text {
+    color: var(--accent);
+}
+
 /* Language Toggle */
 .language-toggle {
     position: fixed;

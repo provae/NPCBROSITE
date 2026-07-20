@@ -1,0 +1,41 @@
+name: Update Twitter Followers
+
+on:
+  schedule:
+    # Run every 24 hours at midnight UTC
+    - cron: '0 0 * * *'
+  workflow_dispatch: # Allow manual trigger
+
+jobs:
+  update-followers:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+      
+      - name: Update Twitter followers
+        run: |
+          API_KEY="capt_live_fxKg6uNGErVAvdEJGn5SAFrIfzVe3adJ"
+          TWITTER_HANDLE="NpcBroCoin"
+          
+          # Fetch data from API
+          RESPONSE=$(curl -s -H "Authorization: Bearer $API_KEY" \
+            "https://api.captapi.com/v1/twitter/profile?url=https://x.com/$TWITTER_HANDLE")
+          
+          # Extract followers count using jq
+          FOLLOWERS=$(echo $RESPONSE | jq -r '.data.followers')
+          TIMESTAMP=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
+          
+          # Create JSON file
+          echo "{\"followers\":$FOLLOWERS,\"timestamp\":\"$TIMESTAMP\",\"handle\":\"$TWITTER_HANDLE\"}" > twitter-followers.json
+          
+          echo "Updated followers: $FOLLOWERS at $TIMESTAMP"
+      
+      - name: Commit and push changes
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add twitter-followers.json
+          git diff --staged --quiet || git commit -m "Update Twitter followers [skip ci]"
+          git push

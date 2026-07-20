@@ -109,7 +109,7 @@
             <div class="stats-grid">
                 <div class="stat-card">
                     <div class="stat-icon">𝕏</div>
-                    <div class="stat-number" id="twitter-followers">0</div>
+                    <div class="stat-number" id="twitter-followers">Loading...</div>
                     <div class="stat-label">Twitter Followers</div>
                 </div>
                 <div class="stat-card">
@@ -260,11 +260,31 @@
             const twitterFollowers = document.getElementById('twitter-followers');
             const discordMembers = document.getElementById('discord-members');
             
-            const targetTwitter = 1250;
-            const targetDiscord = 890;
+            // Fetch real Twitter followers from JSON file (updated by GitHub Actions)
+            fetchTwitterFollowers();
             
-            animateNumber(twitterFollowers, 0, targetTwitter, 2000);
+            const targetDiscord = 890;
             animateNumber(discordMembers, 0, targetDiscord, 2000);
+        }
+
+        async function fetchTwitterFollowers() {
+            const twitterFollowers = document.getElementById('twitter-followers');
+            
+            // Show fallback immediately
+            twitterFollowers.textContent = '147';
+            
+            // Try to fetch from JSON file (updated by GitHub Actions every 24h)
+            try {
+                const response = await fetch('twitter-followers.json');
+                const data = await response.json();
+                
+                if (data.followers) {
+                    twitterFollowers.textContent = data.followers.toLocaleString();
+                    console.log(`Auto-updated: ${data.followers} followers at ${data.timestamp}`);
+                }
+            } catch (error) {
+                console.log('JSON file not available yet, showing fallback');
+            }
         }
 
         function animateNumber(element, start, end, duration) {
